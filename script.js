@@ -15,6 +15,7 @@ function agregarImagen(event) {
     // Crear un nuevo div para la imagen
     const imagenDiv = document.createElement("div");
     imagenDiv.classList.add("imagen");
+    imagenDiv.setAttribute("data-timestamp", Date.now());
 
     // Crear la etiqueta de imagen
     const imagen = document.createElement("img");
@@ -46,7 +47,11 @@ function agregarImagen(event) {
     imagenDiv.appendChild(botonModificar);
 
     // Agregar la nueva imagen a la galería
-    document.getElementById("galeria").appendChild(imagenDiv);
+    const galeria = document.getElementById("galeria");
+    galeria.appendChild(imagenDiv);
+
+    // Ordenar las imágenes por fecha de adición
+    ordenarImagenesPorFecha();
 
     // Limpiar los campos del formulario
     document.getElementById("url-imagen").value = '';
@@ -81,4 +86,15 @@ function guardarDescripcion() {
 
 function eliminarImagen(imagenDiv) {
     imagenDiv.remove();
+}
+
+function ordenarImagenesPorFecha() {
+    const galeria = document.getElementById("galeria");
+    const imagenes = Array.from(galeria.getElementsByClassName("imagen"));
+
+    imagenes.sort((a, b) => {
+        return parseInt(a.getAttribute("data-timestamp")) - parseInt(b.getAttribute("data-timestamp"));
+    });
+
+    imagenes.forEach(imagen => galeria.appendChild(imagen));
 }
