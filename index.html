@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Galería de Imágenes Interactiva</h1>
+
+    <!-- Formulario para agregar nuevas imágenes -->
+    <form id="formulario" onsubmit="agregarImagen(event)">
+        <input type="url" id="url-imagen" placeholder="URL de la imagen" required>
+        <input type="text" id="descripcion-imagen" placeholder="Descripción de la imagen" required>
+        <button type="submit">Agregar Imagen</button>
+    </form>
+
+    <div id="galeria" class="galeria">
+        <!-- Las imágenes se agregarán aquí dinámicamente -->
+    </div>
+
+    <!-- Modal para cambiar la descripción -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Cambiar Descripción</h2>
+            <img id="imgemodo" src="" alt="" style="display: block; margin: 0 auto; max-width: 100px; max-height: 100px;">
+            <input type="text" id="nueva-descripcion" placeholder="Nueva descripción">
+            <button onclick="guardarDescripcion()">Guardar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
