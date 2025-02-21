@@ -66,23 +66,23 @@ h1 a:hover {
 }
 
 .slider ul li:first-of-type {
-    background-image: url("../0.jpg")
+    background-image: url("0.jpg")
 }
 
 .slider ul li:nth-of-type(2) {
-    background-image: url("../1.jpg")
+    background-image: url("1.jpg")
 }
 
 .slider ul li:nth-of-type(3) {
-    background-image: url("../2.jpg")
+    background-image: url("2.jpg")
 }
 
 .slider ul li:nth-of-type(4) {
-    background-image: url("../3.jpg")
+    background-image: url("3.jpg")
 }
 
 .slider ul li:last-of-type {
-    background-image: url("../4.jpg")
+    background-image: url("4.jpg")
 }
 
 .slider .controll {
