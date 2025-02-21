@@ -1,4 +1,91 @@
- <script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" z href="styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body translate="no">
+    <!-- slider -->
+    <div class="slider">
+        <!-- <button id"newsexxx">Añadir seccion</button> -->
+        <!-- slide -->
+        <ul>
+            <li class="" style="left: 0px;">
+                <div class="slide" style="perspective: 400px;">
+                    <div class="container">
+                        <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">seccion 1</h2>
+                        <div class="slide-center">
+                            <p id="editable-text" contenteditable="false"
+                                style="top: 0px; opacity: 1; left: auto; position: static;">
+
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia dolor, qui et nobis
+                                eius quo praesentium
+                                reprehenderit, ipsum illo, esse laudantium quibusdam error aliquam at id corrupti
+                                perspiciatis mollitia eum?
+
+                            </p>
+
+
+                            <button id="edit-button"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Edit
+                                Text</button>
+
+
+                            <textarea id="text-input" style="display: none; width: 100%; height: 100px;"></textarea>
+
+
+                            <button id="save-button"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); display: none;">Save</button>
+
+
+                            <script>
+                                const editableText = document.getElementById('editable-text');
+                                const editButton = document.getElementById('edit-button');
+                                const saveButton = document.getElementById('save-button');
+                                const textInput = document.getElementById('text-input');
+
+
+                                editButton.addEventListener('click', () => {
+
+                                    textInput.style.display = 'block';
+                                    textInput.value = editableText.innerText;
+
+                                    saveButton.style.display = 'inline-block';
+                                });
+
+
+                                saveButton.addEventListener('click', () => {
+                                    const editedText = textInput.value;
+
+
+                                    editableText.innerText = editedText;
+
+
+                                    textInput.style.display = 'none';
+                                    saveButton.style.display = 'none';
+
+
+                                    alert('Cambios guardados: ' + editedText);
+                                });
+                            </script>
+                            <!-- Botón para abrir el modal -->
+                            <button id="img-new"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Subir
+                                imagen</button>
+                            <input type="url" id="url-imagen" placeholder="URL de la imagen" required
+                                style="display: none;">
+                            <button id="add-img-button" type="submit" style="display: none;">Agregar Imagen</button>
+
+                            <script>
                                 const imgNewButton = document.getElementById('img-new');
                                 const urlImagenInput = document.getElementById('url-imagen');
                                 const addImgButton = document.getElementById('add-img-button');
@@ -59,3 +146,781 @@
                                     });
                                 }
                             </script>
+
+                            <div class="slid images gallery">
+                                <div class="row">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">. </h2>
+                    </div>
+                </div>
+            </li>
+            <li class="" style="left: 0px; z-index: 1075;">
+                <div class="slide" style="perspective: 400px;">
+                    <div class="container">
+                        <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> seccion 2
+                        </h2>
+                        <div class="slide-center">
+
+
+                            <p id="editable-text1" contenteditable="false"
+                                style="top: 0px; opacity: 1; left: auto; position: static;">
+
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia dolor, qui et nobis
+                                eius quo praesentium
+                                reprehenderit, ipsum illo, esse laudantium quibusdam error aliquam at id corrupti
+                                perspiciatis mollitia eum?
+
+                            </p>
+
+
+                            <button id="edit-button1"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Edit
+                                Text</button>
+
+
+                            <textarea id="text-input1"
+                                style="display: none; width: 100%; height: 100px; border: 1px solid #ccc; border-radius: 5px; padding: 10px; font-size: 16px;"></textarea>
+
+
+                            <button id="save-button1"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); display: none;">Save</button>
+
+                            <script>
+                                const editableText1 = document.getElementById('editable-text1');
+                                const editButton1 = document.getElementById('edit-button1');
+                                const saveButton1 = document.getElementById('save-button1');
+                                const textInput1 = document.getElementById('text-input1');
+
+
+                                editButton1.addEventListener('click', () => {
+
+                                    textInput1.style.display = 'block';
+                                    textInput1.value = editableText1.innerText;
+
+                                    saveButton1.style.display = 'inline-block';
+                                });
+
+
+                                saveButton1.addEventListener('click', () => {
+                                    const editedText1 = textInput1.value;
+
+
+                                    editableText1.innerText = editedText1;
+
+
+                                    textInput1.style.display = 'none';
+                                    saveButton1.style.display = 'none';
+
+
+                                    alert('Cambios guardados: ' + editedText1);
+                                });
+                            </script>
+
+                            <!-- Botón para abrir el modal -->
+                            <button id="img-new1"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Subir
+                                imagen</button>
+                            <input type="url" id="url-imagen" placeholder="URL de la imagen" required
+                                style="display: none;">
+
+                            <button id="add-img-button1" type="submit" style="display: none;">Agregar Imagen</button>
+
+                            <script>
+                                const imgNewButton1 = document.getElementById('img-new1');
+                                const urlImagenInput1 = document.getElementById('url-imagen1');
+                                const addImgButton1 = document.getElementById('add-img-button1');
+
+                                imgNewButton1.addEventListener('click', () => {
+                                    urlImagenInput1.style.display = 'block';
+                                    addImgButton1.style.display = 'inline-block';
+                                });
+
+                                addImgButton1.addEventListener('click', () => {
+                                    const url = urlImagenInput1.value;
+                                    if (url) {
+                                        const row = document.querySelector('.slid2 .row');
+                                        const boxes = row.querySelectorAll('.box');
+                                        const newBoxNumber = boxes.length + 1;
+
+                                        const newBox = document.createElement('div');
+                                        newBox.className = `box box${newBoxNumber}`;
+                                        const newImg = document.createElement('img');
+                                        newImg.src = url;
+                                        newImg.className = 'img';
+                                        newBox.appendChild(newImg);
+
+
+                                        row.appendChild(newBox);
+
+
+                                        newBox.addEventListener('click', () => {
+                                            row.removeChild(newBox);
+                                            updateBoxClasses();
+                                            imgNewButton1.style.display = 'inline-block';
+                                        });
+
+                                        urlImagenInput1.style.display = 'none';
+                                        addImgButton1.style.display = 'none';
+                                        urlImagenInput1.value = '';
+                                        alert('Imagen agregada.');
+
+
+                                        if (row.querySelectorAll('.box').length >= 3) {
+                                            imgNewButton1.style.display = 'none';
+                                        }
+                                        updateBoxClasses();
+                                    } else {
+                                        alert('Por favor, ingrese una URL válida.');
+                                    }
+                                });
+
+
+                                function updateBoxClasses() {
+                                    const row = document.querySelector('.slid2 .row');
+                                    const boxes = row.querySelectorAll('.box');
+
+                                    boxes.forEach((box, index) => {
+                                        box.classList.remove(...box.classList);
+                                        box.classList.add('box', `box${index + 1}`);
+                                    });
+                                }
+                            </script>
+
+
+                            <div class="slid2 images gallery">
+                                <div class="row">
+                                    <!-- <div class="chek1 box box1"><img class="img"
+                                        src="https://i.postimg.cc/44hggPMb/cat-1046544-1920.jpg" alt=""></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">.</h2>
+                    </div>
+                </div>
+            </li>
+            <li class="active" style="left: 0px; z-index: 1076;">
+                <div class="slide" style="perspective: 400px;">
+
+                    <div class="container">
+                        <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">seccion 3</h2>
+
+                        <div class="slide-center">
+                            <p id="editable-text2" contenteditable="false"
+                                style="top: 0px; opacity: 1; left: auto; position: static;">
+
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia dolor, qui et nobis
+                                eius quo praesentium
+                                reprehenderit, ipsum illo, esse laudantium quibusdam error aliquam at id corrupti
+                                perspiciatis mollitia eum?
+
+                            </p>
+
+
+                            <button id="edit-button2"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Edit
+                                Text</button>
+
+
+                            <textarea id="text-input2" style="display: none; width: 100%; height: 100px;"></textarea>
+
+
+                            <button id="save-button2"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); display: none;">Save</button>
+
+                            <script>
+                                const editableText2 = document.getElementById('editable-text2');
+                                const editButton2 = document.getElementById('edit-button2');
+                                const saveButton2 = document.getElementById('save-button2');
+                                const textInput2 = document.getElementById('text-input2');
+
+
+                                editButton2.addEventListener('click', () => {
+
+                                    textInput2.style.display = 'block';
+                                    textInput2.value = editableText2.innerText;
+
+                                    saveButton2.style.display = 'inline-block';
+                                });
+
+
+                                saveButton2.addEventListener('click', () => {
+                                    const editedText = textInput2.value;
+
+
+                                    editableText2.innerText = editedText;
+
+
+                                    textInput2.style.display = 'none';
+                                    saveButton2.style.display = 'none';
+
+
+                                    alert('Cambios guardados: ' + editedText);
+                                });
+                            </script>
+
+                            <!-- Botón para abrir el modal -->
+                            <button id="img-new2"
+                                style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Subir
+                                imagen</button>
+                            <input type="url" id="url-imagen2" placeholder="URL de la imagen" required
+                                style="display: none;">
+                            <button id="add-img-button2" type="submit" style="display: none;">Agregar
+                                Imagen</button>
+
+                            <script>
+                                const imgNewButton2 = document.getElementById('img-new2');
+                                const urlImagenInput2 = document.getElementById('url-imagen2');
+                                const addImgButton2 = document.getElementById('add-img-button2');
+
+                                imgNewButton2.addEventListener('click', () => {
+                                    urlImagenInput2.style.display = 'block';
+                                    addImgButton2.style.display = 'inline-block';
+                                });
+
+                                addImgButton2.addEventListener('click', () => {
+                                    const url = urlImagenInput2.value;
+                                    if (url) {
+                                        const row = document.querySelector('.slid3 .row');
+                                        const boxes = row.querySelectorAll('.box');
+                                        const newBoxNumber = boxes.length + 1;
+
+                                        const newBox = document.createElement('div');
+                                        newBox.className = `box box${newBoxNumber}`;
+                                        const newImg = document.createElement('img');
+                                        newImg.src = url;
+                                        newImg.className = 'img';
+                                        newBox.appendChild(newImg);
+
+
+                                        row.appendChild(newBox);
+
+
+                                        newBox.addEventListener('click', () => {
+                                            row.removeChild(newBox);
+                                            updateBoxClasses();
+                                            imgNewButton2.style.display = 'inline-block';
+                                        });
+
+                                        urlImagenInput2.style.display = 'none';
+                                        addImgButton2.style.display = 'none';
+                                        urlImagenInput2.value = '';
+                                        alert('Imagen agregada.');
+
+
+                                        if (row.querySelectorAll('.box').length >= 3) {
+                                            imgNewButton2.style.display = 'none';
+                                        }
+                                        updateBoxClasses();
+                                    } else {
+                                        alert('Por favor, ingrese una URL válida.');
+                                    }
+                                });
+
+
+                                function updateBoxClasses() {
+                                    const row = document.querySelector('.slid3 .row');
+                                    const boxes = row.querySelectorAll('.box');
+
+                                    boxes.forEach((box, index) => {
+                                        box.classList.remove(...box.classList);
+                                        box.classList.add('box', `box${index + 1}`);
+                                    });
+                                }
+                            </script>
+
+
+                            <div class="slid3 images gallery">
+                                <div class="row">
+                                    <!-- <div class="chek1 box box1"><img class="img"
+                                                    src="https://i.postimg.cc/44hggPMb/cat-1046544-1920.jpg" alt=""></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">.</h2>
+                    </div>
+
+
+                </div>
+            </li>
+            <li class="" style="left: 0px; z-index: 1072;">
+                <div class="slide" style="perspective: 400px;">
+                    <div class="slide" style="perspective: 400px;">
+
+                        <div class="container">
+                            <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">seccion 4
+                            </h2>
+
+                            <div class="slide-center">
+                                <p id="editable-text3" contenteditable="false"
+                                    style="top: 0px; opacity: 1; left: auto; position: static;">
+
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia dolor, qui et
+                                    nobis
+                                    eius quo praesentium
+                                    reprehenderit, ipsum illo, esse laudantium quibusdam error aliquam at id
+                                    corrupti
+                                    perspiciatis mollitia eum?
+
+                                </p>
+
+
+                                <button id="edit-button3"
+                                    style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Edit
+                                    Text</button>
+
+
+                                <textarea id="text-input3"
+                                    style="display: none; width: 100%; height: 100px;"></textarea>
+
+
+                                <button id="save-button3"
+                                    style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); display: none;">Save</button>
+
+                                <script>
+                                    const editableText3 = document.getElementById('editable-text3');
+                                    const editButton3 = document.getElementById('edit-button3');
+                                    const saveButton3 = document.getElementById('save-button3');
+                                    const textInput3 = document.getElementById('text-input3');
+
+
+                                    editButton3.addEventListener('click', () => {
+
+                                        textInput3.style.display = 'block';
+                                        textInput3.value = editableText3.innerText;
+
+                                        saveButton3.style.display = 'inline-block';
+                                    });
+
+
+                                    saveButton3.addEventListener('click', () => {
+                                        const editedText = textInput3.value;
+
+
+                                        editableText3.innerText = editedText;
+
+
+                                        textInput3.style.display = 'none';
+                                        saveButton3.style.display = 'none';
+
+
+                                        alert('Cambios guardados: ' + editedText);
+                                    });
+                                </script>
+
+                                <!-- Botón para abrir el modal -->
+                                <button id="img-new3"
+                                    style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Subir
+                                    imagen</button>
+                                <input type="url" id="url-imagen3" placeholder="URL de la imagen" required
+                                    style="display: none;">
+                                <button id="add-img-button3" type="submit" style="display: none;">Agregar
+                                    Imagen</button>
+
+                                <script>
+                                    const imgNewButton3 = document.getElementById('img-new3');
+                                    const urlImagenInput3 = document.getElementById('url-imagen3');
+                                    const addImgButton3 = document.getElementById('add-img-button3');
+
+                                    imgNewButton3.addEventListener('click', () => {
+                                        urlImagenInput3.style.display = 'block';
+                                        addImgButton3.style.display = 'inline-block';
+                                    });
+
+                                    addImgButton3.addEventListener('click', () => {
+                                        const url = urlImagenInput3.value;
+                                        if (url) {
+                                            const row = document.querySelector('.slid4 .row');
+                                            const boxes = row.querySelectorAll('.box');
+                                            const newBoxNumber = boxes.length + 1;
+
+                                            const newBox = document.createElement('div');
+                                            newBox.className = `box box${newBoxNumber}`;
+                                            const newImg = document.createElement('img');
+                                            newImg.src = url;
+                                            newImg.className = 'img';
+                                            newBox.appendChild(newImg);
+
+
+                                            row.appendChild(newBox);
+
+
+                                            newBox.addEventListener('click', () => {
+                                                row.removeChild(newBox);
+                                                updateBoxClasses();
+                                                imgNewButton3.style.display = 'inline-block';
+                                            });
+
+                                            urlImagenInput3.style.display = 'none';
+                                            addImgButton3.style.display = 'none';
+                                            urlImagenInput3.value = '';
+                                            alert('Imagen agregada.');
+
+
+                                            if (row.querySelectorAll('.box').length >= 3) {
+                                                imgNewButton3.style.display = 'none';
+                                            }
+                                            updateBoxClasses();
+                                        } else {
+                                            alert('Por favor, ingrese una URL válida.');
+                                        }
+                                    });
+
+
+                                    function updateBoxClasses() {
+                                        const row = document.querySelector('.slid4 .row');
+                                        const boxes = row.querySelectorAll('.box');
+
+                                        boxes.forEach((box, index) => {
+                                            box.classList.remove(...box.classList);
+                                            box.classList.add('box', `box${index + 1}`);
+                                        });
+                                    }
+                                </script>
+
+
+                                <div class="slid4 images gallery">
+                                    <div class="row">
+                                        <!-- <div class="chek1 box box1"><img class="img"
+                                                        src="https://i.postimg.cc/44hggPMb/cat-1046544-1920.jpg" alt=""></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">text printing
+                                        esetting </h2> -->
+                            <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">.</h2>
+
+                        </div>
+
+                    </div>
+            </li>
+            <li class="" style="left: 0px; z-index: 1073;">
+                <div class="slide" style="perspective: 400px;">
+                    <div class="slide" style="perspective: 400px;">
+
+                        <div class="container">
+                            <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">seccion 5
+                            </h2>
+
+                            <div class="slide-center">
+                                <p id="editable-text4" contenteditable="false"
+                                    style="top: 0px; opacity: 1; left: auto; position: static;">
+
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia dolor, qui et
+                                    nobis
+                                    eius quo praesentium
+                                    reprehenderit, ipsum illo, esse laudantium quibusdam error aliquam at id
+                                    corrupti
+                                    perspiciatis mollitia eum?
+
+                                </p>
+
+
+                                <button id="edit-button4"
+                                    style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Edit
+                                    Text</button>
+
+
+                                <textarea id="text-input4"
+                                    style="display: none; width: 100%; height: 100px;"></textarea>
+
+
+                                <button id="save-button4"
+                                    style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); display: none;">Save</button>
+
+                                <script>
+                                    const editableText4 = document.getElementById('editable-text4');
+                                    const editButton4 = document.getElementById('edit-button4');
+                                    const saveButton4 = document.getElementById('save-button4');
+                                    const textInput4 = document.getElementById('text-input4');
+
+
+                                    editButton4.addEventListener('click', () => {
+
+                                        textInput4.style.display = 'block';
+                                        textInput4.value = editableText4.innerText;
+
+                                        saveButton4.style.display = 'inline-block';
+                                    });
+
+
+                                    saveButton4.addEventListener('click', () => {
+                                        const editedText = textInput4.value;
+
+
+                                        editableText4.innerText = editedText;
+
+
+                                        textInput4.style.display = 'none';
+                                        saveButton4.style.display = 'none';
+
+
+                                        alert('Cambios guardados: ' + editedText);
+                                    });
+                                </script>
+
+                                <!-- Botón para abrir el modal -->
+                                <button id="img-new4"
+                                    style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Subir
+                                    imagen</button>
+                                <input type="url" id="url-imagen4" placeholder="URL de la imagen" required
+                                    style="display: none;">
+                                <button id="add-img-button4" type="submit" style="display: none;">Agregar
+                                    Imagen</button>
+
+                                <script>
+                                    const imgNewButton4 = document.getElementById('img-new4');
+                                    const urlImagenInput4 = document.getElementById('url-imagen4');
+                                    const addImgButton4 = document.getElementById('add-img-button4');
+
+                                    imgNewButton4.addEventListener('click', () => {
+                                        urlImagenInput4.style.display = 'block';
+                                        addImgButton4.style.display = 'inline-block';
+                                    });
+
+                                    addImgButton4.addEventListener('click', () => {
+                                        const url = urlImagenInput4.value;
+                                        if (url) {
+                                            const row = document.querySelector('.slid5 .row');
+                                            const boxes = row.querySelectorAll('.box');
+                                            const newBoxNumber = boxes.length + 1;
+
+                                            const newBox = document.createElement('div');
+                                            newBox.className = `box box${newBoxNumber}`;
+                                            const newImg = document.createElement('img');
+                                            newImg.src = url;
+                                            newImg.className = 'img';
+                                            newBox.appendChild(newImg);
+
+
+                                            row.appendChild(newBox);
+
+
+                                            newBox.addEventListener('click', () => {
+                                                row.removeChild(newBox);
+                                                updateBoxClasses();
+                                                imgNewButton4.style.display = 'inline-block';
+                                            });
+
+                                            urlImagenInput4.style.display = 'none';
+                                            addImgButton4.style.display = 'none';
+                                            urlImagenInput4.value = '';
+                                            alert('Imagen agregada.');
+
+
+                                            if (row.querySelectorAll('.box').length >= 3) {
+                                                imgNewButton4.style.display = 'none';
+                                            }
+                                            updateBoxClasses();
+                                        } else {
+                                            alert('Por favor, ingrese una URL válida.');
+                                        }
+                                    });
+
+
+                                    function updateBoxClasses() {
+                                        const row = document.querySelector('.slid5 .row');
+                                        const boxes = row.querySelectorAll('.box');
+
+                                        boxes.forEach((box, index) => {
+                                            box.classList.remove(...box.classList);
+                                            box.classList.add('box', `box${index + 1}`);
+                                        });
+                                    }
+                                </script>
+
+
+                                <div class="slid5 images gallery">
+                                    <div class="row">
+                                        <!-- <div class="chek1 box box1"><img class="img"
+                                                        src="https://i.postimg.cc/44hggPMb/cat-1046544-1920.jpg" alt=""></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">text printing
+                                        esetting </h2> -->
+                            <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">.</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ol>
+            <!-- point -->
+            <li class=""><i class="fa fa-circle-o"></i></li>
+            <li class=""><i class="fa fa-circle-o"></i></li>
+            <li class="active"><i class="fa fa-circle-o"></i></li>
+            <li class=""><i class="fa fa-circle-o"></i></li>
+            <li class=""><i class="fa fa-circle-o"></i></li>
+            <!-- playpause -->
+            <i class="fa playpause fa-pause-circle-o" title="pause"></i>
+        </ol>
+        <!-- controll -->
+        <span class="controll"></span>
+        <span class="controll active"></span>
+    </div>
+
+
+
+
+    <!-- title -->
+    <h1>Ponga 10 profe <br> <a href="https://plus.google.com/u/2/collection/Ueezx"
+            target="_blank">ANTY,VALE,LALITOGAMES</a></h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script id="rendered-js">
+        $(function () {
+            "use strict";
+
+            var body = $("body"),
+                active = $(".slider ol li, .slider .controll"),
+                controll = $(".slider .controll"),
+                playpause = $(".playpause"),
+                sliderTime = 1,
+                sliderWait = 10000,
+                i = 999, o,
+                slideStart = $(".slider ul li:first"),
+                autoRun,
+                stop = false;
+
+            slideStart.css("left", 0);
+
+            function slideGSAP(parent) {
+                "use strict";
+                var str = parent.find(".slide p"), arr = str.text().split(" ");
+                for (o = 0; o < arr.length; o++) {
+                    arr[o] = "<span>" + arr[o] + "</span>";
+                }
+                str.html(arr.join(" "));
+                var tl = new TimelineLite();
+                tl.
+                    set(parent.find(".slide"), { perspective: 400 }).
+
+                    set(parent.find(".slide h2:first"), { x: 0, autoAlpha: 1 }).
+                    set(parent.find(".slide h2:last"), { x: 0, autoAlpha: 1 }).
+                    set(parent.find(".slide p span"), { cycle: { color: ["white", "white"] }, opacity: 1, top: 0 }).
+                    set(parent.find(".slide button:first"), { rotationY: 0, autoAlpha: 1 }).
+                    set(parent.find(".slide button:last"), { rotationY: 0, autoAlpha: 1 }).
+                    set(parent.find(".slide img"), { scale: 1, rotation: 1, borderRadius: 1, autoAlpha: 1 }).
+
+                    from(parent.find(".slide h2:first"), 1.5, { x: -200, autoAlpha: 0 }).
+                    from(parent.find(".slide h2:last"), 1.5, { x: 200, autoAlpha: 0 }, 0).
+                    staggerFrom(parent.find(".slide p span"), 1, { cycle: { color: ["red", "yellow"] }, opacity: 0, position: 'relative', cycle: { top: [-80, -40] }, left: 50 }, 0.009, "-=1").
+                    from(parent.find(".slide button:first"), 1, { rotationY: -360, autoAlpha: 0 }, "-=1").
+                    from(parent.find(".slide button:last"), 1, { rotationY: 360, autoAlpha: 0 }, "-=1").
+                    staggerFrom(parent.find(".slide img"), 1, { scale: 0, rotation: -180, borderRadius: 100, autoAlpha: 0 }, 0.2, "-=0.5");
+            }
+            slideGSAP(slideStart);
+
+
+            function runSlider(what) {
+                what.addClass("active").siblings("li, span").removeClass("active");
+            }
+
+            function gsapSlider(whose, left) {
+                i++;
+                if (whose.hasClass("active")) {
+                    TweenMax.fromTo(
+                        ".slider ul li.active",
+                        sliderTime,
+                        { zIndex: i, left: left },
+                        { left: 0 });
+
+                }
+            }
+
+            active.on("click", function () {
+                runSlider($(this));
+                slideGSAP($(this));
+            });
+
+            controll.first().on("click", function () {
+                $(".slider ul li.active, .slider ol li.active").find("textarea, #save-button, #save-button1, #save-button2, #save-button3, #save-button4, #url-imagen, #add-img-button").hide();
+                var slide = $(".slider ul li.active, .slider ol li.active").is(
+                    ":first-of-type") ?
+
+                    $(".slider ul li:last, .slider ol li:last") :
+                    $(".slider ul li.active, .slider ol li.active").prev("li");
+                runSlider(slide);
+                slideGSAP(slide);
+                gsapSlider(slide, "100%");
+            });
+
+            controll.last().on("click", function () {
+                $(".slider ul li.active, .slider ol li.active").find("textarea, #save-button, #save-button1, #save-button2, #save-button3, #save-button4, #url-imagen, #add-img-button").hide();
+                var slide = $(".slider ul li.active, .slider ol li.active").is(
+                    ":last-of-type") ?
+
+                    $(".slider ul li:first, .slider ol li:first") :
+                    $(".slider ul li.active, .slider ol li.active").next("li");
+                runSlider(slide);
+                slideGSAP(slide);
+                gsapSlider(slide, "-100%");
+            });
+
+            $(".slider ol li").on("click", function () {
+                $(".slider ul li.active, .slider ol li.active").find("textarea, #save-button, #save-button1, #save-button2, #save-button3, #save-button4, #url-imagen, #add-img-button").hide();
+                var start = $(".slider ul li.active").index();
+                var slide = $(".slider ul li").eq($(this).index());
+                runSlider(slide);
+                slideGSAP(slide);
+                var end = $(".slider ul li.active").index();
+                if (start > end) {
+                    gsapSlider(slide, "100%");
+                }
+                if (start < end) {
+                    gsapSlider(slide, "-100%");
+                }
+            });
+
+            function autoRunSlider() {
+                $(".slider ul li.active, .slider ol li.active").find("textarea, #save-button, #save-button1, #save-button2, #save-button3, #save-button4, #url-imagen, #add-img-button").hide();
+                if (body.css("direction") === "ltr" && stop === false) {
+                    autoRun = setInterval(function () {
+                        controll.last().click();
+                    }, sliderWait);
+                } else if (body.css("direction") === "rtl" && stop === false) {
+                    autoRun = setInterval(function () {
+                        controll.first().click();
+                    }, sliderWait);
+                }
+            }
+            autoRunSlider();
+
+            active.on("mouseenter", function () {
+                if (stop === false) { clearInterval(autoRun); }
+            });
+            active.on("mouseleave", function () {
+                if (stop === false) { autoRunSlider(); }
+            });
+
+            playpause.on("click", function () {
+                $(this).toggleClass("fa-play-circle-o fa-pause-circle-o");
+                if (playpause.hasClass("fa-play-circle-o")) {
+                    stop = true;
+                    clearInterval(autoRun);
+                    $(this).attr('title', 'play');
+                }
+                if (playpause.hasClass("fa-pause-circle-o")) {
+                    stop = false;
+                    autoRunSlider();
+                    $(this).attr('title', 'pause');
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
